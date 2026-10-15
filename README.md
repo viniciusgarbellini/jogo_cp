@@ -17,7 +17,7 @@ FastAPI próprio do grupo**.
 
 ## Vídeo
 
-**Link do vídeo:** _(colocar aqui o link do YouTube não listado / Google Drive)_
+**Link do vídeo:** https://www.youtube.com/watch?v=hjRCs79JN5o
 
 ## Arquitetura
 
