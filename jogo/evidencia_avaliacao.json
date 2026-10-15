@@ -1,0 +1,9 @@
+{
+  "resultado": {
+    "identificou_mentira": true,
+    "explicou_verdade": true,
+    "identificou_motivo": true,
+    "justificativa": "O jogador identificou corretamente a mentira central, a sequência exata dos eventos e o verdadeiro motivo por trás do roubo. Todas as suas deduções estão em perfeita consonância com os fatos do caso."
+  },
+  "pontuacao": 3
+}

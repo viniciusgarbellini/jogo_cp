@@ -1,0 +1,23 @@
+{
+  "crime": "Uma peca rara do acervo desapareceu da sala de restauro de um museu municipal.",
+  "local": "Sala de restauro do Museu Municipal",
+  "horario": "Entre 19h e 20h de uma quinta-feira",
+  "suspeito": "Dalton Reis",
+  "motivo": "Uma divida alta com um colecionador particular que encomendou a peca.",
+  "verdade": "Dalton trocou a peca original por uma reproducao durante o turno da noite e saiu com a original na mochila pela porta de servico. Ele desligou a camera do corredor por quinze minutos alegando manutencao.",
+  "versao_oficial": "Sai da sala as 19h, fui jantar na praca e voltei so no dia seguinte. A camera do corredor estava em manutencao programada e eu nao tinha acesso a chave do armario.",
+  "mentira_principal": "Dalton afirma que nao tinha acesso a chave do armario, mas ele retirou a chave na portaria naquela noite e assinou o livro de registro.",
+  "evidencias": [
+    "o livro de registro da portaria tem uma assinatura de retirada de chave as 19h10",
+    "a camera do corredor ficou desligada por quinze minutos entre 19h e 20h",
+    "a reproducao encontrada no lugar da peca usa um verniz moderno, diferente do original"
+  ],
+  "pode_revelar": [
+    "Admito que fui o ultimo funcionario a sair da ala naquela noite.",
+    "Reconheco que a manutencao da camera nao estava no cronograma oficial."
+  ],
+  "deve_esconder": [
+    "Que assinou o livro de registro retirando a chave do armario as 19h10.",
+    "Que saiu pela porta de servico, e nao pela entrada principal."
+  ]
+}

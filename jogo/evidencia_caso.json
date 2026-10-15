@@ -1,0 +1,23 @@
+{
+  "crime": "Roubo do valioso Pingente Estelar da Galeria de Arte.",
+  "local": "Galeria de Arte 'O Olho Esquerdo', salão principal.",
+  "horario": "Entre 22h30 e 23h de ontem.",
+  "suspeito": "Elias Ventura",
+  "motivo": "Elias tinha uma dívida de jogo urgente com agiotas e precisava do dinheiro da joia para pagá-la.",
+  "verdade": "Elias, segurança noturno, desativou o alarme do expositor, roubou o Pingente Estelar e, para simular um arrombamento externo, quebrou a janela do salão principal com um objeto pesado da despensa. Ele escondeu a joia em seu armário no vestiário antes de 'descobrir' o crime.",
+  "versao_oficial": "Eu estava fazendo minha ronda habitual e, ao retornar ao salão principal por volta das 23h, vi a janela quebrada e o expositor vazio. Chamei a polícia imediatamente. Eu tinha acabado de checar o sistema de vigilância das câmeras e estava tudo normal, não vi nada suspeito.",
+  "mentira_principal": "Eu tinha acabado de checar o sistema de vigilância das câmeras e estava tudo normal.",
+  "evidencias": [
+    "O relatório técnico indica que as câmeras de segurança do setor A (onde fica o expositor) e do corredor de acesso ao vestiário pararam de gravar simultaneamente por 15 minutos, das 22h35 às 22h50.",
+    "Análises forenses revelam que a janela do salão principal foi quebrada de dentro para fora, e não o contrário, com estilhaços predominantemente internos.",
+    "O alarme do expositor do Pingente Estelar foi desativado manualmente do painel de controle central às 22h50, e não foi acionado por arrombamento."
+  ],
+  "pode_revelar": [
+    "Elias é o único funcionário que estava de plantão noturno na galeria no horário do roubo.",
+    "Houve uma discussão recente entre Elias e seu gerente sobre a pontualidade de suas rondas e a atenção ao monitoramento."
+  ],
+  "deve_esconder": [
+    "As chaves do painel de controle de alarmes estavam no chaveiro pessoal de Elias durante todo o seu turno.",
+    "Uma verificação de rotina do vestiário revelou que o cadeado do armário de Elias estava destrancado, embora ele afirme sempre trancá-lo."
+  ]
+}

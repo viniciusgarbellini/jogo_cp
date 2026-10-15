@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
+
+:root {
+  --bg: #10131A;
+  --surface: #171B23;
+  --surface-hi: #1D2027;
+  --text: #EEF0F2;
+  --muted: #A9AFB8;
+  --accent: #E8A33D;
+  --accent-soft: #FFC16C;
+  --ok: #E8A33D;
+  --erro: #FFB4AB;
+}
+
+html, body, .stApp, [data-testid="stAppViewContainer"] {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* limpa o chrome padrão do Streamlit */
+#MainMenu, footer, [data-testid="stHeader"], [data-testid="stToolbar"] { display: none !important; }
+[data-testid="stMainBlockContainer"] { max-width: 1100px; padding-top: 1.5rem; padding-bottom: 8rem; }
+
+.mono { font-family: "JetBrains Mono", monospace; }
+
+/* fundo com imagem + escurecimento (a imagem entra pelo Python em --bg-img) */
+.stApp.com-fundo, .stApp:has(.fundo-ativo) {
+  background:
+    linear-gradient(180deg, rgba(16,19,26,.75) 0%, rgba(16,19,26,.35) 40%, rgba(16,19,26,.9) 100%),
+    var(--bg-img) center top / cover no-repeat fixed;
+}
+[data-testid="stBottom"] > div, [data-testid="stBottomBlockContainer"] { background: transparent !important; }
+
+/* ---------- menu ---------- */
+.menu { text-align: center; margin-top: 6vh; }
+.menu img.icone { width: 84px; height: 84px; border-radius: 18px; box-shadow: 0 0 40px rgba(232,163,61,.25); }
+.menu h1 { font-size: 3rem; font-weight: 800; letter-spacing: .02em; margin: 1.2rem 0 .2rem; text-transform: uppercase; }
+.menu .sub { color: var(--accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.menu .slogan { color: var(--muted); font-style: italic; margin: .4rem 0 1.5rem; }
+
+.protocolo {
+  max-width: 720px; margin: 1.5rem auto 0; padding: 1.2rem 1.5rem; text-align: left;
+  background: rgba(23,27,35,.92); border-radius: 14px; border-top: 2px solid rgba(232,163,61,.5);
+}
+.protocolo .titulo { color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: .8rem; letter-spacing: .08em; margin-bottom: .8rem; }
+.protocolo .passo { display: flex; gap: .9rem; margin: .7rem 0; }
+.protocolo .num { color: var(--accent); font-family: "JetBrains Mono", monospace; background: var(--surface-hi); border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex: none; }
+.protocolo .passo b { display: block; }
+.protocolo .passo span { color: var(--muted); font-size: .92rem; }
+
+/* botões primários */
+.stButton > button[kind="primary"], .stFormSubmitButton > button[kind="primaryFormSubmit"], .stFormSubmitButton > button {
+  background: var(--accent); color: #462B00; font-weight: 800; border: 0; border-radius: 10px; padding: .7rem 1.4rem;
+  box-shadow: 0 6px 24px rgba(232,163,61,.25);
+}
+.stButton > button[kind="primary"]:hover, .stFormSubmitButton > button:hover { background: var(--accent-soft); color: #462B00; border: 0; }
+
+/* ---------- gameplay ---------- */
+.hud { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.ficha {
+  background: rgba(23,27,35,.82); backdrop-filter: blur(6px); border-radius: 12px; padding: .9rem 1.1rem;
+  max-width: 480px; border: 1px solid rgba(255,255,255,.06);
+}
+.ficha .rotulo { color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: .72rem; letter-spacing: .08em; margin-bottom: .3rem; }
+.ficha .crime { font-weight: 700; margin-bottom: .5rem; }
+.ficha .linha { font-family: "JetBrains Mono", monospace; font-size: .8rem; color: var(--muted); }
+.ficha .linha b { color: var(--accent-soft); font-weight: 700; }
+
+.contador { background: rgba(23,27,35,.82); backdrop-filter: blur(6px); border-radius: 12px; padding: .8rem 1.1rem; border: 1px solid rgba(255,255,255,.06); }
+.contador .rotulo { color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: .72rem; letter-spacing: .08em; }
+.contador .bolas { margin-top: .4rem; display: flex; gap: .4rem; align-items: center; }
+.contador .bola { width: .85rem; height: .85rem; border-radius: 50%; background: #32353C; }
+.contador .bola.cheia { background: var(--accent); box-shadow: 0 0 10px rgba(232,163,61,.6); }
+.contador .num { margin-left: .5rem; font-weight: 800; }
+
+.palco { min-height: 52vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.falante { font-family: "JetBrains Mono", monospace; font-size: .78rem; letter-spacing: .08em; color: var(--accent); background: rgba(16,19,26,.7); padding: .25rem .8rem; border-radius: 99px; }
+.legenda {
+  max-width: 900px; margin: .6rem auto 0; text-align: center; font-size: 1.55rem; line-height: 1.5; font-weight: 600;
+  color: var(--accent-soft); text-shadow: 0 2px 10px rgba(0,0,0,.9); padding: .8rem 1.2rem; background: rgba(16,19,26,.45); border-radius: 12px;
+}
+.legenda.dica { color: var(--muted); font-size: 1.15rem; font-style: italic; }
+
+/* barra de pergunta */
+[data-testid="stChatInput"] { background: rgba(23,27,35,.95); border-radius: 14px; border: 1px solid rgba(232,163,61,.35); }
+
+/* ---------- cartões (acusação e resultado) ---------- */
+.cartao-topo { color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: .78rem; letter-spacing: .08em; margin-bottom: .4rem; }
+.cartao-titulo { font-size: 2.2rem; font-weight: 800; margin: 0 0 .8rem; }
+[data-testid="stForm"] { background: rgba(23,27,35,.95); border-radius: 16px; border: 1px solid rgba(255,255,255,.06); padding: 1.5rem; }
+[data-testid="stTextArea"] textarea { background: #0B0E15; border-radius: 10px; }
+
+.criterio { display: flex; gap: 1rem; align-items: center; background: var(--surface); border-radius: 12px; padding: 1rem 1.2rem; margin: .7rem 0; }
+.criterio .icone { width: 2.2rem; height: 2.2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex: none; }
+.criterio.ok .icone { background: var(--accent); color: #462B00; }
+.criterio.erro .icone { background: var(--erro); color: #690005; }
+.criterio .pts { margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: .8rem; color: var(--muted); }
+.parecer { background: #0B0E15; border-radius: 12px; padding: 1.1rem 1.3rem; font-family: "JetBrains Mono", monospace; font-size: .88rem; line-height: 1.6; margin: 1rem 0; }
+.parecer .rotulo { color: var(--accent); font-size: .72rem; letter-spacing: .08em; margin-bottom: .4rem; }
+
+@media (max-width: 700px) {
+  .menu h1 { font-size: 2rem; }
+  .legenda { font-size: 1.1rem; }
+  .palco { min-height: 40vh; }
+}
+
+.stButton > button[kind="primary"] p, .stFormSubmitButton > button p { color: #462B00 !important; font-weight: 800; }
