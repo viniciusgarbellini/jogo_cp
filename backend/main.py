@@ -5,11 +5,17 @@ Rodar: uvicorn main:app --reload   (Swagger em http://localhost:8000/docs)
 
 import logging
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+import truststore
 
-import config
-from routers import ia_generativa
+# Usa os certificados do sistema operacional. Sem isso, redes com inspecao de HTTPS
+# (ex.: rede da faculdade) derrubam a chamada ao Gemini com CERTIFICATE_VERIFY_FAILED.
+truststore.inject_into_ssl()
+
+from fastapi import FastAPI  # noqa: E402
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
+
+import config  # noqa: E402
+from routers import ia_generativa  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s [%(name)s] %(message)s")
 
